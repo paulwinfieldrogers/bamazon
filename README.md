@@ -2,7 +2,9 @@
 Overview: This application is a command line amazon like application which provides using mysql, inqirer and table npm packages & allows for the following functionality:
 
 1. When you run the program you will see a table of Product Ids, Product Descriptions and Prices
-insert screenshot
+
+bamazon/bam1.png
+      
 2. The user is prompted to enter an item id
 3. The program then checks to see if the ID entered is valid by checking logging into the mySQL database and determining if that item exists
  - If it doesn't exist the user is prompted to enter valid ID
