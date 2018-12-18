@@ -33,7 +33,7 @@ To run this program please do the following:
 6. You can test whether the application logic is working by
 - entering an invalid item id at the prompt
 - attempting to order a very large number that exceeds the on hand stored in the database
-- confirm the onhand by running a SQL query i.e. select stock_quantity from products where item_id = your item id in mySQL then enter a smaller number then is returned
+- confirm the onhand by running a SQL query i.e. select stock_quantity from products where item_id = your item id in mySQL.  Then enter an amount lower than the onhand.  You should look the DB before and after running the program to confirm that the on hand is being decremented.
 
 This application must be run in the terminal so no URL is provided.
 
