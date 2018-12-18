@@ -3,7 +3,6 @@ var inquirer = require("inquirer");
 var Table = require('cli-table');
 
 //connection info for mysql DB
-
 var connection = mysql.createConnection({
   host: "localhost",
   // Your port; if not 3306
@@ -14,7 +13,6 @@ var connection = mysql.createConnection({
   password: "password",
   database: "bamazon"
 });
-
 //the below uses cli table to format the output - you push the response 
 //items into an array after iterating through the response
 
@@ -28,9 +26,6 @@ var showAllItems = function () {
     for (var i = 0; i < res.length; i++) {
       table.push([res[i].item_id, res[i].product_name, res[i].price]);
     }
-    //console.log(res[0].item_id )
-    //console.log(res[1].item_id )
-    //console.log(res[2].item_id )
     console.log(table.toString());
     customerChoice()
   });
@@ -50,11 +45,10 @@ var customerChoice = function () {
         if (err) throw err;
         if (res.length === 0) {
           //1st check to see if we got a value back
-          //console.log(anone)
           console.log("Please enter a valid item");
           customerChoice();
         }
-        //now ask for the quantiry
+        //now ask for the quantity
         else {
           inquirer.prompt({
 
@@ -67,8 +61,6 @@ var customerChoice = function () {
               var quantity = antwo.quantity;
               var updatedQuantity = res[0].stock_quantity - quantity;
               var totalOrderPrice = quantity * res[0].price;
-              //this needs to be fixed as it is reducing all inventory
-              //need to add item id to where clause
               //check to see if customer has ordered more than avail
               if (quantity > res[0].stock_quantity) {
                 console.log("We don't have sufficient stock. Please enter a lower quantity.")
@@ -88,7 +80,6 @@ var customerChoice = function () {
       })
   })
 }
-
 
 showAllItems();
 
