@@ -26,7 +26,7 @@ If the quantity requested is less than or equal to the amount on hand for that i
 
 To run this program please do the following:
 1. Run the file Setup.sql in your mySQL database to create the required DB objects.  Confirm that you have done this correctly with the included select statement
-2. You will need to run npm install for mysql, inquirer and table from the command line in your terminal before running the application
+2. You will need to run npm install for mysql, inquirer and table from the command line in your terminal before running the application.  You will also need to update the database connection info in the JavaScript file to connect to your DB
 3. From the command line run the program by typing "node bamazonCustomer.js"
 4. Select an item by id
 5. Select a quantity
