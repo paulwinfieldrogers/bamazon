@@ -1,19 +1,19 @@
 # bamazon
-Overview: This application is a command line amazon like application which provides using mysql, inqirer and table npm packages & allows for the following functionality:
+Overview: This application is a command line amazon-like application which uses mysql, inqirer and table npm packages & allows for the following functionality:
 
 1. When you run the program you will see a table of Product Ids, Product Descriptions and Prices
 
 ![ScreenShot](bam1.png)
       
 2. The user is prompted to enter an item id
-3. The program then checks to see if the ID entered is valid by checking logging into the mySQL database and determining if that item exists
+3. The program then checks to see if the ID entered is valid by logging into the mySQL database and determining if that item exists
  - If it doesn't exist the user is prompted to enter valid ID
 
 ![ScreenShot](bam2.png)
 
-4. If the item id exists the user is then prompted to enter a quantity
+4. If the item id exists, the user is then prompted to enter a quantity
 5. The progam then checks to ensure the quantity requested by the user does not exceed the total amount on hand
-- If there is insufficient quantity the user is notified and asked to enter a lower quamtity
+- If there is insufficient quantity the user is notified and asked to enter a lower quantity
 
 ![ScreenShot](bam3.png)
 
@@ -31,6 +31,6 @@ To run this program please do the following:
 4. Select an item by id
 5. Select a quantity
 6. You can test whether the application logic is working by
-- entering an invalid item id at thr prompt
+- entering an invalid item id at the prompt
 - attempting to order a very large number that exceeds the on hand stored in the database
 - confirm the onhand by running a SQL query i.e. select stock_quantity from products where item_id = your item id in mySQL then enter a smaller number then is returned
