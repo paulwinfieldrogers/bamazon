@@ -23,7 +23,7 @@ var showAllItems = function () {
     if (err) throw err;
     var table = new Table({
       head: ['Product Id', 'Product Description', 'Cost'],
-      colWidths: [5, 50, 8],
+      colWidths: [13, 50, 8],
     });
     for (var i = 0; i < res.length; i++) {
       table.push([res[i].item_id, res[i].product_name, res[i].price]);
@@ -80,7 +80,7 @@ var customerChoice = function () {
                   function (err, res) {
                     if (err) throw err;
                   })                
-                console.log("We've fufilled your order.  It was " + totalOrderPrice);
+                console.log("We've fufilled your order.  It was $" + totalOrderPrice);
                 process.exit(-1);; //exit once order complete
               }
             })
